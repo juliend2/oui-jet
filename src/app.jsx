@@ -2,17 +2,21 @@ import { useState, useEffect } from "preact/hooks";
 // import preactLogo from "./assets/preact.svg";
 // import viteLogo from "/vite.svg";
 import "./app.css";
-import ImageComponent from "./components/image.jsx";
-import TextComponent from "./components/text.jsx";
+import ImageBox from "./components/image.jsx";
+import TextBox from "./components/text.jsx";
+import LinkBox from "./components/link.jsx";
+import PlusBox from "./components/plus.jsx";
+import NewBox from "./components/new_box.jsx";
 
 const componentsMap = {
-  image: ImageComponent,
-  text: TextComponent,
+  image: ImageBox,
+  text: TextBox,
+  link: LinkBox,
 };
 
 function Box(props) {
   const [data, setData] = useState(props.data);
-  const DynamicComponent = componentsMap[data.type] || TextComponent;
+  const DynamicComponent = componentsMap[data.type] || TextBox;
 
   return <DynamicComponent {...data} />;
 }
