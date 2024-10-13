@@ -27,6 +27,32 @@
     width: 80%;
 }
 
+.box--link {
+    padding: 10px;
+}
+.box--link a {
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.box--link a:hover {
+    background-color: #000088;
+    color: white;
+}
+.box--link a:active {
+    background-color: #000000;
+    color: white;
+}
+
 .box--text {
     padding: 10px;
 }

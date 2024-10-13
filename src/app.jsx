@@ -37,9 +37,12 @@ export function App() {
 
   console.log("clickHandler", clickHandler);
   return (
-    <div className="boxes">
-      <PlusBox clickHandler={clickHandler} />
-      {boxes}
-    </div>
+    <>
+      <NewBox handleSubmit={() => {}} />
+      <div className="boxes">
+        <PlusBox clickHandler={clickHandler} />
+        {boxes}
+      </div>
+    </>
   );
 }

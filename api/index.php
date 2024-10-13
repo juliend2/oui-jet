@@ -22,6 +22,11 @@ function list_boxes()
                     "https://upload.wikimedia.org/wikipedia/commons/9/9f/A_photo_of_an_apparition_in_Asyut_%28September_15th_2000%29..jpg",
             ],
             [
+                "type" => "link",
+                "label" => "Mon site",
+                "url" => "https://desrosiers.org/",
+            ],
+            [
                 "type" => "text",
                 "value" => "Hola!",
             ],
