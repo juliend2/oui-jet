@@ -35,5 +35,11 @@ export function App() {
       .catch((error) => console.error("Error: ", error));
   }, []);
 
-  return <div className="boxes">{boxes}</div>;
+  console.log("clickHandler", clickHandler);
+  return (
+    <div className="boxes">
+      <PlusBox clickHandler={clickHandler} />
+      {boxes}
+    </div>
+  );
 }

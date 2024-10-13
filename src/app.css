@@ -10,11 +10,21 @@
 .box {
     width: calc(25vw - (var(--gutter) * 2));
     margin-right: var(--gutter);
-    height: calc(25vw - (var(--gutter) * 5));
+    height: calc(25vw - (var(--gutter) * 2));
     margin-bottom: var(--gutter);
 
     background-color: #ffffff;
     box-shadow: 2px 2px 15px -8px rgba(0, 0, 0, 0.52);
+}
+
+.box--plus a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.box--plus svg {
+    width: 80%;
 }
 
 .box--text {
