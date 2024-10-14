@@ -2,5 +2,7 @@ server:
 	php -S localhost:3000
 
 client:
-	nvm use 20
-	vite
+	. ~/.nvm/nvm.sh && nvm use 20 && vite
+
+
+.PHONY: nvm

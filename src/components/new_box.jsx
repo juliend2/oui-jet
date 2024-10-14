@@ -1,10 +1,11 @@
-import { useEffect, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
 
 function ImageBoxForm() {
   return (
     <>
       <p>
-        <input type="file" name="image" />
+        <label htmlFor="file">File</label>
+        <input type="file" id="file" name="image" />
       </p>
     </>
   );
@@ -14,10 +15,12 @@ function LinkBoxForm() {
   return (
     <>
       <p>
-        <input type="text" name="label" placeholder="Click here" />
+        <label htmlFor="label">Label (optional)</label>
+        <input type="text" id="label" name="label" placeholder="Click here" />
       </p>
       <p>
-        <input type="url" name="url" placeholder="https://www..." />
+        <label htmlFor="url">URL</label>
+        <input type="url" id="url" name="url" placeholder="https://www..." />
       </p>
     </>
   );
@@ -27,13 +30,14 @@ function TextBoxForm() {
   return (
     <>
       <p>
-        <input type="text" name="text" placeholder="Type something..." />
+        <label htmlFor="text">Text</label>
+        <textarea name="text" id="text" placeholder="Type something..."></textarea>
       </p>
     </>
   );
 }
 
-export default function NewBox({ handleSubmit }) {
+export default function NewBox({ handleSubmit, closeHandler }) {
   const [boxType, setBoxType] = useState("text"); // or image
   const handleChangeType = (e) => {
     setBoxType(e.target.value);
@@ -51,10 +55,12 @@ export default function NewBox({ handleSubmit }) {
   })(boxType);
 
   return (
-    <div className="new-box-modal">
-      <form action="" onSubmit={handleSubmit}>
+    <div className="box box--newForm">
+      <a href="#" className='newForm__close' onClick={closeHandler}>X</a>
+      <form action="" onSubmit={handleSubmit} className="newForm__form">
         <p>
-          <select name="" onChange={handleChangeType}>
+          <label htmlFor="type">Box type</label>
+          <select name="" id="type" onChange={handleChangeType}>
             <option value="text">Text</option>
             <option value="image">Image</option>
             <option value="link">Link</option>

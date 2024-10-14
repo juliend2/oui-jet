@@ -39,12 +39,10 @@ export function App() {
       .catch((error) => console.error("Error: ", error));
   }, []);
 
-  console.log("clickHandler", clickHandler);
   return (
     <>
-      <NewBox handleSubmit={() => {}} />
       <div className="boxes">
-        <PlusBox clickHandler={clickHandler} />
+        <PlusBox handleSubmit={handleNewBoxFormSubmit} />
         {boxes}
       </div>
     </>

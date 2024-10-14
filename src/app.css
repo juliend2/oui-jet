@@ -70,3 +70,30 @@
     width: 100%;
     height: 100%;
 }
+
+.box--newForm {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.newForm__close {
+    display: block;
+    padding: 30px;
+}
+.newForm__form {
+    width: 100%;
+    padding: 0 var(--gutter);
+}
+
+.box--newForm textarea {
+    width: 100%;
+    height: 6rem;
+}
+.box--newForm label {
+    display: block;
+    width: 100%;
+}
+.box--newForm input[type='text'],
+.box--newForm input[type='url'] {
+    width: 100%;
+}
