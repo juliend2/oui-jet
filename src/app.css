@@ -103,9 +103,11 @@
         color: transparent;
         padding: 30px;
     }
+    .newForm__close:hover {
+        color: transparent;
+    }
     @media screen and (max-width: 768px) {
         .newForm__close {
-            
             padding: 18px;
         }
     }

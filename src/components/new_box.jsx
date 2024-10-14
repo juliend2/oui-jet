@@ -37,6 +37,7 @@ function TextBoxForm() {
   );
 }
 
+
 export default function NewBox({ handleSubmit, closeHandler }) {
   const [boxType, setBoxType] = useState("text"); // or image
   const handleChangeType = (e) => {
@@ -54,13 +55,24 @@ export default function NewBox({ handleSubmit, closeHandler }) {
     }
   })(boxType);
 
+  /**
+   * 
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      setBoxes(data.boxes.map((d) => <Box data={d} />));
+    })
+    .catch((error) => console.error("Error: ", error));
+
+   */
+
   return (
     <div className="box box--newForm">
       <a href="#" className='newForm__close' onClick={closeHandler}>×</a>
       <form action="" onSubmit={handleSubmit} className="newForm__form">
         <p>
           <label htmlFor="type">Box type</label>
-          <select name="" id="type" onChange={handleChangeType}>
+          <select name="type" id="type" onChange={handleChangeType}>
             <option value="text">Text</option>
             <option value="image">Image</option>
             <option value="link">Link</option>
