@@ -1,3 +1,7 @@
+:root {
+    --x-button-url: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(45, 50, 50)"><rect x="45" y="10" width="10" height="80" fill="black" /><rect x="10" y="45" width="80" height="10" fill="black" /></g></svg>');
+}
+
 #app {
 }
 .boxes {
@@ -15,6 +19,18 @@
 
     background-color: #ffffff;
     box-shadow: 2px 2px 15px -8px rgba(0, 0, 0, 0.52);
+}
+@media screen and (max-width: 768px) {
+    .box {
+        width: calc(100vw - (var(--gutter) * 2));
+        margin-right: var(--gutter);
+        height: calc(100vw - (var(--gutter) * 2));
+        margin-bottom: var(--gutter);
+    }
+}
+
+.box p:first-child {
+    margin-top: 0;
 }
 
 .box--plus a {
@@ -75,15 +91,28 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+    accent-color: lime;
 }
-.newForm__close {
-    display: block;
-    padding: 30px;
-}
-.newForm__form {
-    width: 100%;
-    padding: 0 var(--gutter);
-}
+
+    .newForm__close {
+        display: block;
+        background-image: var(--x-button-url);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: transparent;
+        padding: 30px;
+    }
+    @media screen and (max-width: 768px) {
+        .newForm__close {
+            
+            padding: 18px;
+        }
+    }
+    .newForm__form {
+        width: 100%;
+        padding: 0 var(--gutter);
+    }
 
 .box--newForm textarea {
     width: 100%;
@@ -96,4 +125,9 @@
 .box--newForm input[type='text'],
 .box--newForm input[type='url'] {
     width: 100%;
+}
+
+.box--newForm button {
+    background: #555555;
+    color: white;
 }

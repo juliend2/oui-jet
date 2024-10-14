@@ -56,7 +56,7 @@ export default function NewBox({ handleSubmit, closeHandler }) {
 
   return (
     <div className="box box--newForm">
-      <a href="#" className='newForm__close' onClick={closeHandler}>X</a>
+      <a href="#" className='newForm__close' onClick={closeHandler}>×</a>
       <form action="" onSubmit={handleSubmit} className="newForm__form">
         <p>
           <label htmlFor="type">Box type</label>
@@ -67,6 +67,7 @@ export default function NewBox({ handleSubmit, closeHandler }) {
           </select>
         </p>
         <DynamicComponent />
+        <button>Add</button>
       </form>
     </div>
   );
