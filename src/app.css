@@ -71,7 +71,15 @@
 
 .box--text {
     padding: 10px;
+    overflow: hidden;
+    white-space: pre-line;
 }
+.box--text:hover,
+.box--text:active,
+.box--text:focus {
+    overflow-y: auto;
+}
+
 .box--text p {
     margin-top: 0;
 }
@@ -91,9 +99,8 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    accent-color: lime;
+    accent-color: black;
 }
-
     .newForm__close {
         display: block;
         background-image: var(--x-button-url);
